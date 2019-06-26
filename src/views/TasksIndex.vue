@@ -4,7 +4,7 @@
    <!--  {{ guardian }} -->
     
     <div v-for='child in children'>
-      <!-- {{ child }} -->
+      <!-- {{ child.id }} -->
        <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
       <div v-for="tasks in child.task">
         {{ tasks.name }} || {{ tasks.description }} || {{ tasks.time }} {{tasks.status }}

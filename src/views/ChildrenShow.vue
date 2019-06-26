@@ -1,6 +1,12 @@
 <template>
   <div class="children-show">
-    {{ child.picture_url }}
+    <!-- {{ child.picture_url }}...
+    {{ child.name }}....
+    {{ child.task[0]['name']  }}....
+    {{ child.task[0]['description']  }}.... -->
+    <!-- {{ child.picture_url }} -->
+    <!-- {{ child.picture_url }} -->
+
     <br>
     Child's name: {{ child.name }}
     <br>
@@ -12,7 +18,11 @@
     <br>
     Time: {{ child.task[0]['time'] }}
     <br>
-    Assigned to: {{ child.guardian[0]['name'] }}
+    Status: {{child.task[0]['status']}}
+    <br>
+    Assigned to: {{ child.relationships[0].guardian.name }}
+    <br>
+
 
 
 
