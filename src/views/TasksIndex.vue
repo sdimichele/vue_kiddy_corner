@@ -1,19 +1,16 @@
 <template>
   <div class="tasks">
     <h1>All Tasks</h1>
-    <!-- {{ guardian }} -->
+   <!--  {{ guardian }} -->
     
-      <div v-for='child in children'>
-         <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
-        <div v-for='tasks in child'>
-          <div v-for='task in tasks'>
-            {{task.name}} 
-            {{task.description}}
-            {{task.time}}
-          </div>
-        </div>
-      </div> 
-    </div>
+    <div v-for='child in children'>
+      <!-- {{ child }} -->
+       <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
+      <div v-for="tasks in child.task">
+        {{ tasks.name }} || {{ tasks.description }} || {{ tasks.time }} {{tasks.status }}
+      </div>
+    </div> 
+  </div>
  
 </template>
 
@@ -26,7 +23,7 @@ export default {
       guardian: [],
       relationship: [],
       children: [],
-      task: []
+      task: [],
     };
   },
   created: function() {
@@ -37,10 +34,13 @@ export default {
     axios.get("/api/users").then(response => {
       this.guardian = response.data;
     });
+    console.log("Hello World!!!")
     axios.get('/api/children').then(response => {
       this.children = response.data; 
     });
-    axios.get('/api/tasks').then(response => {
+  
+    console.log("Hello Task!!")
+    axios.get('/api/tasks?child_id=' + this.$route.params.id).then(response => {
       this.tasks = response.data;
     })
   },

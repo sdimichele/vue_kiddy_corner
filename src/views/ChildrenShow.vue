@@ -1,6 +1,20 @@
 <template>
   <div class="children-show">
-    <h1>{{ child.name }} </h1>
+    {{ child.picture_url }}
+    <br>
+    Child's name: {{ child.name }}
+    <br>
+    Activity: {{ child.task[0]['name'] }}
+    <br>
+    Description: {{ child.task[0]['description'] }}
+    <br>
+    Date: {{ child.task[0]['date'] }}
+    <br>
+    Time: {{ child.task[0]['time'] }}
+    <br>
+    Assigned to: {{ child.guardian[0]['name'] }}
+
+
 
   </div>
 </template>
