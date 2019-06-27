@@ -2,16 +2,20 @@
   <div class="tasks">
     <h1>All Tasks</h1>
    <!--  {{ guardian }} -->
-    
+    <!-- {{ tasks }} -->
     <div v-for='child in children'>
-      <!-- {{ child.id }} -->
-       <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
-      <div v-for="tasks in child.task">
-        {{ tasks.name }} || {{ tasks.description }} || {{ tasks.time }} {{tasks.status }}
-      </div>
+      <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
+      <div v-for='thing in child.tasks'>
+        {{ thing.name }}
+        {{ thing.description }}
+        {{ thing.time }}
+         <button v-on:click="completed(thing.status); alert('Are you sure you want to change the status');"> {{thing.status}} </button>
+      </div> 
     </div> 
   </div>
  
+
+
 </template>
 
 <script>
@@ -22,8 +26,8 @@ export default {
     return {
       guardian: [],
       relationship: [],
-      children: [],
-      task: [],
+      children: []
+      // tasks: []
     };
   },
   created: function() {
@@ -38,12 +42,17 @@ export default {
     axios.get('/api/children').then(response => {
       this.children = response.data; 
     });
-  
-    console.log("Hello Task!!")
-    axios.get('/api/tasks?child_id=' + this.$route.params.id).then(response => {
-      this.tasks = response.data;
-    })
+  // 
+    // console.log("Hello Task!!")
+    // axios.get('/api/tasks').then(response => {
+      // this.tasks = response.data;
+    // })
   },
-  methods: {}
+  methods: {
+
+      completed: function(status) {
+        this.buttonName = status;
+      }
+    }
 };
 </script>

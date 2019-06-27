@@ -7,14 +7,14 @@
     <!-- {{ child.picture_url }} -->
     <!-- {{ child.picture_url }} -->
 
-    <br>
+   <!--  <br>
     Child's name: {{ child.name }}
     <br>
     Activity: {{ child.task[0]['name'] }}
     <br>
     Description: {{ child.task[0]['description'] }}
     <br>
-    Date: {{ child.task[0]['date'] }}
+    Date: {{ child.task[0]['datetime']}}
     <br>
     Time: {{ child.task[0]['time'] }}
     <br>
@@ -22,8 +22,14 @@
     <br>
     Assigned to: {{ child.relationships[0].guardian.name }}
     <br>
-
-
+ -->
+   {{ child.name}}
+<div v-for='thing in child.tasks'>
+        {{ thing.name }}
+        {{ thing.description }}
+        {{ thing.time }}
+        {{ thing.status }}
+</div>
 
 
   </div>
