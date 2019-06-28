@@ -9,13 +9,12 @@
         {{ thing.name }}
         {{ thing.description }}
         {{ thing.time }}
-         <button v-on:click="completed(thing.status); alert('Are you sure you want to change the status');"> {{thing.status}} </button>
+        <button v-on:click="completedTask(thing)"> {{ thing.status }} </button>
+        <!-- <button onclick=" alert('Are you sure you want to change the status');"
+        > {{ thing.status }} </button> -->
       </div> 
     </div> 
   </div>
- 
-
-
 </template>
 
 <script>
@@ -26,8 +25,8 @@ export default {
     return {
       guardian: [],
       relationship: [],
-      children: []
-      // tasks: []
+      children: [],
+      tasks: []
     };
   },
   created: function() {
@@ -49,10 +48,15 @@ export default {
     // })
   },
   methods: {
+    completedTask: function(inputThing) {
+      var params = {
+                    status: "completed"
+                   };
+      axios.patch("/api/tasks/" + inputThing.id, params).then(response => {
+        inputThing.status = "completed";
+      });
 
-      completed: function(status) {
-        this.buttonName = status;
-      }
     }
+  }
 };
 </script>
