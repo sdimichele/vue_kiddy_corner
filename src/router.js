@@ -5,7 +5,6 @@ import Signup from './views/Signup.vue'
 import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import TasksIndex from './views/TasksIndex.vue'
-import TasksShow from './views/TasksShow.vue';
 import ChildrenShow from './views/ChildrenShow.vue';
 import TasksNew from './views/TasksNew.vue';
 Vue.use(Router)
@@ -19,9 +18,8 @@ export default new Router({
     {path: '/login', name: 'login', component: Login},
     {path: '/logout', name: 'logout', component: Logout},
     {path: '/tasks', name: 'tasks', component: TasksIndex},
-    {path: '/tasks/:id', name: 'tasks-show', component: TasksShow},
     {path: '/children/:id', name: 'children-show', component: ChildrenShow},
-    {path}
+    {path: '/tasks/new', name: 'tasks-new', component: TasksNew}
 
     
   ]

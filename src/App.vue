@@ -6,7 +6,8 @@
       <router-link to="/signup">Signup</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/logout">Logout</router-link> |
-      <router-link to="/tasks">Tasks</router-link>
+      <router-link to="/tasks">Tasks</router-link> |
+      <router-link to="/tasks/new"> New Task </router-link>
     </div>
     <router-view/>
   </div>

@@ -1,25 +1,15 @@
 <template>
-  <div class="container">
+  <div class="tasks-new">
     <h1>New Task</h1>
     <div>
       Name: <input type="text" v-model="newTaskName">
       Description: <input type="text" v-model="newTaskDescription">
-      Time: <input type="text" v-model="newTaskTime">
-      Date: <input type="text" v-model="newTaskDate">
+      Time: <input type="datetime-local" v-model="newTaskTime">
       
       <button v-on:click="createTask()">Create Task</button>
     </div>
-    <h1>All Tasks</h1>
-   <!--  <div v-for="photo in photos">
-      <h2>{{ photo.name }}</h2>
-      <img v-bind:src="photo.url">
-      <p>Width: {{ photo.width }}</p>
-      <p>Height: {{ photo.height }}</p>
-    </div> -->
   </div>
 </template>
-
-
 <script>
 import axios from "axios";
 
@@ -29,26 +19,24 @@ export default {
       tasks: [],
       newTaskName: "",
       newTaskDescription: "",
-      newPhotoHeight: ""
+      newTaskTime: "",
+      newTaskDate: ""
     };
   },
   created: function() {
-    axios.get("/api/photos").then(response => {
-      this.photos = response.data;
+    axios.get("/api/tasks").then(response => {
+      this.tasks = response.data;
     });
   },
   methods: {
-    createPhoto: function() {
+    createTask: function() {
       var params = {
-        name: this.newPhotoName,
-        width: this.newPhotoWidth,
-        height: this.newPhotoHeight
+        name: this.newTaskName,
+        description: this.newTaskDescription,
+        dateTime: this.newTaskDate + this.newTaskTime
       };
-      axios.post("/api/photos", params).then(response => {
-        this.photos.push(response.data);
-        this.newPhotoName = "";
-        this.newPhotoWidth = "";
-        this.newPhotoHeight = "";
+      axios.post("/api/tasks/", params).then(response => {
+        this.tasks.push(response.data);
       });
     }
   }

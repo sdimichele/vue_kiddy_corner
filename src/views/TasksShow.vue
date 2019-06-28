@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="tasks-show">
     <h1>{{child.name}} </h1>
   </div>
@@ -32,4 +32,4 @@ export default {
   },
   methods: {}
 };
-</script>
+</script> -->
