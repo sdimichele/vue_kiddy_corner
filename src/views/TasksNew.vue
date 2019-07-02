@@ -6,12 +6,13 @@
       Description: <input type="text" v-model="newTaskDescription">
       Time: <input type="datetime-local" v-model="newTaskTime">
       
-      <button v-on:click="createTask()">Create Task</button>
+      <button v-on:click="createTask();">Create Task</button>
     </div>
   </div>
 </template>
 <script>
 import axios from "axios";
+
 
 export default {
   data: function() {
@@ -19,8 +20,7 @@ export default {
       tasks: [],
       newTaskName: "",
       newTaskDescription: "",
-      newTaskTime: "",
-      newTaskDate: ""
+      newTaskTime: ""
     };
   },
   created: function() {
@@ -33,9 +33,9 @@ export default {
       var params = {
         name: this.newTaskName,
         description: this.newTaskDescription,
-        dateTime: this.newTaskDate + this.newTaskTime
+        dateTime: this.newTaskTime
       };
-      axios.post("/api/tasks/", params).then(response => {
+      axios.post("/api/tasks", params).then(response => {
         this.tasks.push(response.data);
       });
     }
