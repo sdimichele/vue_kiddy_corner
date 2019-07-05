@@ -1,14 +1,16 @@
 <template>
   <div class="tasks">
     <h1>All Tasks</h1>
-   <!--  {{ guardian }} -->
+   
     <!-- {{ tasks }} -->
+   <!--  {{child}} -->
     <div v-for='child in children'>
       <router-link v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
       <div v-for='thing in child.tasks'>
         {{ thing.name }}
         {{ thing.description }}
         {{ thing.time }}
+
         <button v-on:click="completedTask(thing)"> {{ thing.status }} </button>
         <!-- <button onclick=" alert('Are you sure you want to change the status');"
         > {{ thing.status }} </button> -->

@@ -101,118 +101,20 @@
                    </router-link>
               </li>
                
+             
 
-              <li class="nav-item dropdown bg-info">
-                <a class="nav-link dropdown-toggle " href="javascript:void(0)" id="stores"
-                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-pencil-square-o nav-icon" aria-hidden="true"></i>
-                  <span>Store</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="stores">
-                  <li>
-                    <a class="dropdown-item
-                     ||
-                     ||
-                    
-
-                    "
-                      href="javascript:void(0)">Products<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <ul class="sub-menu">
-                      <li><a class="" href="products.html">Products Fullwidth</a></li>
-                      <li><a class="" href="product-left-sidebar.html">Products
-                          Left Sidebar</a></li>
-                      <li><a class="" href="product-right-sidebar.html">Products
-                          Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="product-single.html">Single
-                      Product</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="product-category.html">Product
-                      Categories</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="product-cart.html">Cart</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item
-                       ||
-                       ||
-                      
-                      "
-                      href="javascript:void(0)">Checkout<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <ul class="sub-menu">
-                      <li>
-                        <a class="" href="product-checkout-step-1.html">Personal
-                          Info</a>
-                      </li>
-                      <li>
-                        <a class="" href="product-checkout-step-2.html">Payment
-                          Info</a>
-                      </li>
-                      <li>
-                        <a class="" href="product-checkout-step-3.html">Confirmation</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+               <li class="nav-item dropdown bg-purple">
+                <router-link class="nav-link" to="/children/new">
+                  <i class="fa fa-file-text-o nav-icon"></i>
+                  <span>New Child</span>
+                   </router-link>
               </li>
 
-              <li class="nav-item dropdown bg-purple">
-                <a class="nav-link dropdown-toggle " href="javascript:void(0)" id="stores"
-                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-calendar nav-icon" aria-hidden="true"></i>
-                  <span>Blog</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="stores">
-                  <li>
-                    <a class="dropdown-item
-                       ||
-                       ||
-                      
-                    "
-                      href="javascript:void(0)">Blog Grid<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <ul class="sub-menu">
-                      <li><a class="" href="blog-grid.html">Blog Grid Fullwidth</a></li>
-                      <li><a class="" href="blog-grid-left-sidebar.html">Blog
-                          Grid Left Sidebar</a></li>
-                      <li><a class="" href="blog-grid-right-sidebar.html">Blog
-                          Grid Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a class="dropdown-item
-                       ||
-                       ||
-                      "
-                      href="javascript:void(0)">Blog List<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <ul class="sub-menu">
-                      <li><a class="" href="blog-list.html">Blog List Fullwidth</a></li>
-                      <li><a class="" href="blog-list-left-sidebar.html">Blog
-                          List Left Sidebar</a></li>
-                      <li><a class="" href="blog-list-right-sidebar.html">Blog
-                          List Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a class="dropdown-item
-                       ||
-                       ||
-                      
-                    "
-                      href="javascript:void(0)">Single Blog<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    <ul class="sub-menu">
-                      <li><a class="" href="blog-single.html">Blog Single
-                          Fullwidth</a></li>
-                      <li><a class="" href="blog-single-left-sidebar.html">Blog
-                          Single Left Sidebar</a></li>
-                      <li><a class="" href="blog-single-right-sidebar.html">Blog
-                          Single Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                </ul>
+               <li class="nav-item dropdown bg-info">
+                <router-link class="nav-link" to="/Logout">
+                  <i class="fa fa-file-text-o nav-icon"></i>
+                  <span>Logout</span>
+                   </router-link>
               </li>
 
               <li class="nav-item dropdown bg-pink">
@@ -228,12 +130,12 @@
     </header>
 
     <div class="main-wrapper home">
-      <div>
+      <!-- <div>
         <router-link to="/">Home</router-link> |
         <router-link to="/logout">Logout</router-link> |
         <router-link to="/tasks">Tasks</router-link> |
         <router-link to="/tasks/new"> New Task </router-link>
-      </div>
+      </div> -->
 
       <router-view/>
     </div> <!-- element wrapper ends -->
