@@ -28,7 +28,7 @@ export default {
     };
   },
   created: function() {
-   this.guardianId = localStorage.getItems("guardianId");
+   this.guardianId = localStorage.getItem("guardianId");
   },
   methods: {
     createChild: function() {
