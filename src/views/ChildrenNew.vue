@@ -4,8 +4,6 @@
       <h1>New Child</h1>
       <div>
         Name: <input type="text" v-model="newChildName">
-        Picture: <input type="text" v-model="newPictureUrl">
-        Parent: <input type="text" v-model="parentTrue">
         <button v-on:click="createChild();">Create Child</button>
 
       </div>
