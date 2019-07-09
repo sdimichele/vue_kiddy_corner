@@ -137,6 +137,7 @@
         <router-link to="/tasks/new"> New Task </router-link>
       </div> -->
 
+
       <router-view/>
     </div> <!-- element wrapper ends -->
 

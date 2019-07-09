@@ -1,13 +1,36 @@
 <template>
   <div class="children-new">
-    <form>
-      <h1>New Child</h1>
-      <div>
-        Name: <input type="text" v-model="newChildName">
-        <button v-on:click="createChild();">Create Child</button>
-
+      <!--   <input type="text" v-model="newChildName"> -->
+      <!--   <button v-on:click="createChild();">Create Child</button> -->
+<section class="bg-light py-7 py-md-10">
+  <div class="container">
+    <div class="row wow fadeInUp">
+      <div class="col-sm-6 col-xs-12">
+        <div class="section-title align-items-baseline mb-4">
+          <h2 class="text-danger px-0 mb-0">Add an Addition</h2>
+        </div>
+        <p class="text-dark font-size-15">Please add your child's name to start adding activities for them. </p>
+        <ul class="list-unstyled">
+          <li class="media align-items-center mb-3">
+          </li>
+        </ul>
       </div>
-    </form>
+      <div class="col-sm-6 col-xs-12">
+        <form>
+          <div class="form-group form-group-icon">
+            <i class="fa fa-user "></i>
+            <input type="text" class="form-control border-warning" placeholder="Name" v-model="newChildName">
+          </div>
+            <button v-on:click="createChild();" class="btn btn-danger float-right text-uppercase">
+              Submit
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   </div> 
 </template>
 

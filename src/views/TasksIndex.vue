@@ -1,5 +1,7 @@
 <template>
+   
   <div class="tasks">
+    
    <!--  <h1>All Tasks</h1> -->
   <!--  {{tasks[2].child_info[0].name}}
    {{tasks}} -->
@@ -59,6 +61,7 @@
             <div v-for='thing in child.tasks'>
             <h5 class="text-warning">{{ thing.name }}</h5>
             <p> {{ thing.time }}</p>
+               <button class="btn btn-danger float-right text-uppercase" v-on:click="completedTask(thing)"> {{ thing.status }} </button>
           </div>
           </div>
         </div>
