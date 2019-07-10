@@ -7,7 +7,7 @@
     <div class="row wow fadeInUp">
       <div class="col-sm-6 col-xs-12">
         <div class="section-title align-items-baseline mb-4">
-          <h2 class="text-danger px-0 mb-0">Add an Addition</h2>
+          <h2 class="text-danger px-0 mb-0">Register a Child</h2>
         </div>
         <p class="text-dark font-size-15">Please add your child's name to start adding activities for them. </p>
         <ul class="list-unstyled">

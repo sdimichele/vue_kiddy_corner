@@ -53,9 +53,6 @@
               <a class="text-warning text-capitalize d-block text-truncate" href="course-single-left-sidebar.html">{{thing.name}}</a>
             </h3>
             <ul class="list-unstyled text-muted">
-              <li class="mb-1">
-                <i class="fa fa-calendar-o mr-2" aria-hidden="true"></i>Age 2 to 4 Years
-              </li>
               <li>
                 <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>{{thing.time}}
               </li>
