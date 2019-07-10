@@ -1,22 +1,8 @@
 <template>
    
   <div class="tasks">
-    
-   <!--  <h1>All Tasks</h1> -->
-  <!--  {{tasks[2].child_info[0].name}}
-   {{tasks}} -->
-    <!-- {{ tasks }} -->
-   <!--  {{child}} -->
-   <!--  <div v-for='child in children'>
-      <router-link  class="fa fa-graduation-cap" v-bind:to="'/children/' + child['id']"><button> {{child.name}}</button></router-link>
-      <div v-for='thing in child.tasks'>
-        {{ thing.name }}
-        <!- {{ thing.description }} -->
-       <!--  {{ thing.time }} -->
 
-     <!--    <button v-on:click="completedTask(thing)"> {{ thing.status }} </button> --> 
-        <!-- <button onclick=" alert('Are you sure you want to change the status');"
-        > {{ thing.status }} </button> -->
+  <img src="assets/img/banner/slider-1/img-1.jpg" alt="Sky" class="main-image">
 
   <section class="pt-9 pb-6 py-md-7">
   <div class="container">
@@ -61,7 +47,7 @@
             <div v-for='thing in child.tasks'>
             <h5 class="text-warning">{{ thing.name }}</h5>
             <p> {{ thing.time }}</p>
-               <button class="btn btn-danger float-right text-uppercase" v-on:click="completedTask(thing)"> {{ thing.status }} </button>
+               <!-- <button class="btn btn-danger float-right text-uppercase" v-on:click="completedTask(thing)"> {{ thing.status }} </button> -->
           </div>
           </div>
         </div>
@@ -129,6 +115,12 @@
     </div> 
   </div>
 </template>
+
+<style>
+.main-image {
+  width: 100%;
+}
+</style>
 
 <script>
 import axios from "axios";

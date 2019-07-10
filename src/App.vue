@@ -80,17 +80,17 @@
 
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav ml-lg-auto">
-              <li class="nav-item dropdown bg-warning">
+              <!-- <li class="nav-item dropdown bg-warning">
                 <router-link class="nav-link" to="/">
                   <i class="fa fa-home nav-icon"></i>
                   <span>Home</span>
                 </router-link>
-              </li>
+              </li> -->
 
               <li class="nav-item dropdown bg-danger">
                <router-link class="nav-link" to="/tasks">
                   <i class="fa fa-home nav-icon"></i>
-                  <span>Tasks</span>
+                  <span>Home</span>
                 </router-link>
               </li>
 
@@ -105,22 +105,15 @@
 
                <li class="nav-item dropdown bg-purple">
                 <router-link class="nav-link" to="/children/new">
-                  <i class="fa fa-file-text-o nav-icon"></i>
+                  <i class="fa fa-user-plus nav-icon"></i>
                   <span>New Child</span>
                    </router-link>
               </li>
 
-               <li class="nav-item dropdown bg-info">
-                <router-link class="nav-link" to="/Logout">
-                  <i class="fa fa-file-text-o nav-icon"></i>
-                  <span>Logout</span>
-                   </router-link>
-              </li>
-
               <li class="nav-item dropdown bg-pink">
-                <a class="nav-link dropdown-toggle " href="component-default.html">
-                  <i class="fa fa-home nav-icon" aria-hidden="true"></i>
-                  <span>components</span>
+                <a class="nav-link dropdown-toggle " href="/Logout">
+                  <i class="fa fa-sign-out nav-icon" aria-hidden="true"></i>
+                  <span>Logout</span>
                 </a>
               </li>
             </ul>
@@ -165,12 +158,11 @@
         </div>
       </div>
 
-      <div class="pt-8 pb-7  bg-repeat" style="background-image: url(assets/img/background/footer-bg-img-1.png);">
+      <div class="pt-8 pb-7  bg-repeat" style="background-image: url(/assets/img/background/footer-bg-img-1.png);">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-lg-3 col-xs-12">
               <a class="mb-6 d-block" href="index.html">
-                <img class="img-fluid d-inline-block w-50 lazyestload" data-src="/assets/img/logo-footer.png" src="/assets/img/logo-footer.png">
               </a>
               <p class="mb-6">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia.Lorem ipsum dolor sit
                 amet.</p>
@@ -179,32 +171,32 @@
             </div>
 
             <div class="col-sm-6 col-lg-3 col-xs-12">
-              <h4 class="section-title-sm font-weight-bold text-white mb-6">Useful Links</h4>
+              <h4 class="section-title-sm font-weight-bold text-white mb-6">Lessons</h4>
               <ul class="list-unstyled">
                 <li class="mb-4">
                   <a href="index.html">
-                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Kidz School
+                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Swimming 
                   </a>
                 </li>
                 <li class="mb-4">
                   <a href="about-us.html">
-                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>About Kidz School
+                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Basketball
                   </a>
                 </li>
                 <li class="mb-4">
                   <a href="index-v2.html">
-                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Kidz Store
+                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Baseball
                   </a>
                 </li>
                 <li class="mb-4">
                   <a href="index-v3.html">
-                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Kidz Daycare
+                    <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>Soccer
                   </a>
                 </li>
                 <li class="mb-3">
                   <a href="photo-gallery.html">
                     <i class="fa fa-angle-double-right mr-2" aria-hidden="true"></i>
-                    Photo Gallery
+                    Dance
                   </a>
                 </li>
               </ul>
@@ -221,10 +213,9 @@
                     </a>
                     <div class="media-body">
                       <h5 class="line-hight-16 mb-1">
-                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">A Clean Website Gives More Experience To The
-                          Visitors</a>
+                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">A Guide to balancing all the kids activities.</a>
                       </h5>
-                      <time class="text-white">July 7 - 2018</time>
+                      <time class="text-white">July 7 - 2019</time>
                     </div>
                   </div>
                 </li>
@@ -237,10 +228,9 @@
                     </a>
                     <div class="media-body">
                       <h5 class="line-hight-16 mb-1">
-                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">Duis aute irure dolor in reprehenderit
-                          in voluptate.</a>
+                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">Planning vacations with young children.</a>
                       </h5>
-                      <time class="text-white">Jun 7 - 2018</time>
+                      <time class="text-white">Jun 9 - 2019</time>
                     </div>
                   </div>
                 </li>
@@ -253,10 +243,9 @@
                     </a>
                     <div class="media-body">
                       <h5 class="line-hight-16 mb-1">
-                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">Duis aute irure dolor in reprehenderit
-                          in voluptate.</a>
+                        <a class="font-base font-size-14" href="blog-single-left-sidebar.html">What sport is right for your child?</a>
                       </h5>
-                      <time class="text-white">Jun 7 - 2018</time>
+                      <time class="text-white">Jun 10 - 2019</time>
                     </div>
                   </div>
                 </li>
@@ -265,7 +254,7 @@
 
             <div class="col-sm-6 col-lg-3 col-xs-12">
               <h4 class="section-title-sm font-weight-bold text-white mb-6">Mailing List</h4>
-              <p class="mb-4">Sign up for our mailing list to get latest updates and offers.</p>
+              <p class="mb-4">Sign up for our mailing list to get latest updates</p>
               <form class="mb-4" action="">
                 <div class="input-group shadow-light rounded-sm input-addon">
                   <input type="text" class="form-control py-4" placeholder="Email address" aria-describedby="basic-addon21">
